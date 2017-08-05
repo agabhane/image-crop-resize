@@ -1,0 +1,26 @@
+header {
+    padding: 10px 0;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.title-line {
+    display: flex;
+}
+
+.title-line span {
+    width: 30px;
+}
+
+.title-line span:nth-child(1) {
+    border-bottom: 5px solid red;
+}
+
+.title-line span:nth-child(2) {
+    border-bottom: 5px solid #1cd286;
+}
+
+.title-line span:nth-child(3) {
+    border-bottom: 5px solid #00ff95;
+}

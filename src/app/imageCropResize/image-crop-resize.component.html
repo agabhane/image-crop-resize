@@ -1,0 +1,30 @@
+<div class="wrapper">
+    <div class="image-container">
+        <img id="image" src="{{imageSource}}" [style.display]="!!imageSource ? 'block' : 'none'">
+        <div class="file-upload-container" (click)="openFileSelector()" [style.display]="!!imageSource ? 'none' : 'flex'">
+            <div class="upload-text">Drag &amp; drop image here or click here</div>
+            <input type="file" name="file" id="file" style="display:none;" accept="image/*"/>
+        </div>
+        <button class="btn btn-default btn-upload-new-image" (click)="openFileSelector()" [style.display]="!!imageSource ? 'block' : 'none'">Upload New Image</button>
+    </div>
+    <div class="action-container">
+        <div class="form-inline">
+            <div class="form-group">
+                <label class="sr-only" for="width">Width in px</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="width" placeholder="Width" [(ngModel)]="cropWidth" (keyup)="widthChange($event)">
+                    <div class="input-group-addon">px</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="width">Height in px</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="height" placeholder="Height" [(ngModel)]="cropHeight" (keyup)="heightChange($event)">
+                    <div class="input-group-addon">px</div>
+                </div>
+            </div>
+            <button (click)="downloadCroppedImage()" class="btn btn-primary">Download</button>
+        </div>
+        
+    </div>
+</div>
